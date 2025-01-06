@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cmsokopipelinesjavascriptdockeraks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cmsokopipelinesjavascriptdockeraks
+  template:
+    metadata:
+      labels:
+        app: cmsokopipelinesjavascriptdockeraks 
+    spec:
+      containers:
+        - name: cmsokopipelinesjavascriptdockeraks 
+          image: acradmin001.azurecr.io/cmsokopipelinesjavascriptdockeraks
+          ports:
+          - containerPort: 8080
